@@ -1,5 +1,7 @@
 loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
 local Window = Rayfield:CreateWindow({
     Name = "Xyris Hub - Concave World Free Jungle",
     Subtitle = "Made By Xyris Hub Team",
@@ -48,7 +50,7 @@ local ToggleOption = MainTab:CreateToggle({
 })
 
 MainTab:CreateLabel("Click the Get Event Item to get the event item once.")
-MainTab:CreateLabel("Toggle on The Loop Get Event Item to get the item continuously.")
+MainTab:CreateLabel("Toggle on Loop Get Event Item to get the item continuously.")
 
 CreditsTab:CreateLabel("Made By Xyris Hub Team")
 CreditsTab:CreateButton({
