@@ -1,19 +1,22 @@
-loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-local Window = Rayfield:CreateWindow({
+local Window = Fluent:CreateWindow({
     Name = "Xyris Hub - Concave World Free Jungle",
     Subtitle = "Made By Xyris Hub Team",
-    Theme = "Dark",
+    TabWidth = 180,
+    Size = UDim2.fromOffset(450, 240),
     Acrylic = true,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.RightControl,
 })
 
 local MainTab = Window:CreateTab("Main")
 local CreditsTab = Window:CreateTab("Credits")
 
 local ClickButton = MainTab:CreateButton({
-    Name = "Get event Item.",
+    Name = "Get Event Item",
     Callback = function()
         local args = {
             [1] = 2,
@@ -28,7 +31,7 @@ local ClickButton = MainTab:CreateButton({
 })
 
 local ToggleOption = MainTab:CreateToggle({
-    Name = "Loop Get Event Item.",
+    Name = "Loop Get Event Item",
     Default = false,
     Callback = function(state)
         if state then
@@ -48,8 +51,8 @@ local ToggleOption = MainTab:CreateToggle({
     end
 })
 
-MainTab:CreateLabel("Click the Get event item to get The event item once.")
-MainTab:CreateLabel("Toggle on The Loop Get event item to get the item continously continuously.")
+MainTab:CreateLabel("Click the Get Event Item to get the event item once.")
+MainTab:CreateLabel("Toggle on The Loop Get Event Item to get the item continuously.")
 
 local CreditsLabel = CreditsTab:CreateLabel("Made By Xyris Hub Team")
 local DiscordButton = CreditsTab:CreateButton({
