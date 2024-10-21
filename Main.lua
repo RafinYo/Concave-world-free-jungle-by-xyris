@@ -1,5 +1,3 @@
-loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
-
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -28,23 +26,22 @@ MainTab:CreateButton({
     end
 })
 
+local isLooping = false
 local ToggleOption = MainTab:CreateToggle({
     Name = "Loop Get Event Item",
     Default = false,
     Callback = function(state)
-        if state then
-            while true do
-                local args = {
-                    [1] = 2,
-                    [2] = {
-                        [1] = 1,
-                        [2] = 1,
-                        [3] = 14
-                    }
+        isLooping = state
+        while isLooping do
+            local args = {
+                [1] = 2,
+                [2] = {
+                    [1] = 1,
+                    [2] = 1,
+                    [3] = 14
                 }
-                game:GetService("ReplicatedStorage").Project.RemoteEvent.ControlMessageEvent:FireServer(unpack(args))
-                wait()
-            end
+            }
+            game:GetService("ReplicatedStorage").Project.RemoteEvent.ControlMessageEvent:FireServer(unpack(args))
         end
     end
 })
