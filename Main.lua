@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Xyris Hub - Concave World Free Jungle",
+    Name = "Xyris Hub - Concave World Free Jungle",
     Subtitle = "Made By Xyris Hub Team",
     TabWidth = 180,
     Size = UDim2.fromOffset(450, 240),
@@ -15,7 +15,7 @@ local Window = Fluent:CreateWindow({
 local MainTab = Window:CreateTab("Main")
 local CreditsTab = Window:CreateTab("Credits")
 
-local ClickButton = MainTab:CreateButton({
+MainTab:CreateButton({
     Name = "Get Event Item",
     Callback = function()
         local args = {
@@ -54,8 +54,8 @@ local ToggleOption = MainTab:CreateToggle({
 MainTab:CreateLabel("Click the Get Event Item to get the event item once.")
 MainTab:CreateLabel("Toggle on The Loop Get Event Item to get the item continuously.")
 
-local CreditsLabel = CreditsTab:CreateLabel("Made By Xyris Hub Team")
-local DiscordButton = CreditsTab:CreateButton({
+CreditsTab:CreateLabel("Made By Xyris Hub Team")
+CreditsTab:CreateButton({
     Name = "Copy Discord Server Link",
     Callback = function()
         setclipboard("https://discord.gg/3WtS2F7CaX")
