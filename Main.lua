@@ -27,7 +27,7 @@ MainTab:CreateButton({
 })
 
 local ToggleOption = MainTab:CreateToggle({
-    Name = "The Loop Get Event Item",
+    Name = "Loop Get Event Item",
     Default = false,
     Callback = function(state)
         if state then
