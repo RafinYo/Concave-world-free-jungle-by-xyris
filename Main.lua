@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Name = "Xyris Hub - Concave World Free Jungle",
+    Title = "Xyris Hub - Concave World Free Jungle",
     Subtitle = "Made By Xyris Hub Team",
     TabWidth = 180,
     Size = UDim2.fromOffset(450, 240),
