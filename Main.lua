@@ -1,15 +1,11 @@
-loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-
-local Window = Fluent:CreateWindow({
-    Title = "Xyris Hub - Concave World Free Jungle",
+local Window = Rayfield:CreateWindow({
+    Name = "Xyris Hub - Concave World Free Jungle",
     Subtitle = "Made By Xyris Hub Team",
     TabWidth = 180,
-    Size = UDim2.fromOffset(450, 240),
-    Acrylic = true,
     Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.RightControl,
+    Acrylic = true,
 })
 
 local MainTab = Window:CreateTab("Main")
