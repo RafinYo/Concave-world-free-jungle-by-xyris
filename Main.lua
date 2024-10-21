@@ -42,6 +42,7 @@ local ToggleOption = MainTab:CreateToggle({
                 }
             }
             game:GetService("ReplicatedStorage").Project.RemoteEvent.ControlMessageEvent:FireServer(unpack(args))
+            wait(1)
         end
     end
 })
@@ -57,3 +58,5 @@ CreditsTab:CreateButton({
     end
 })
 CreditsTab:CreateLabel("Join our Discord server")
+
+Window.TabWidth = 120
